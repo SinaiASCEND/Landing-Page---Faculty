@@ -48,6 +48,20 @@ a.card:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
 .cardgo{margin-top:16px;font-weight:700;font-size:13px;color:var(--magenta)}
 a.card:nth-child(even) .cardgo{color:var(--cyan)}
 
+.codepanel{margin-top:22px;width:min(760px,100%);display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.22);border-left:5px solid var(--cyan);
+  border-radius:var(--radius);padding:18px 22px;color:#fff}
+.codepanel .cptext{flex:1 1 320px;min-width:0}
+.codepanel .cpk{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:#9fc2e8;margin-bottom:6px}
+.codepanel .cpt{font-size:16.5px;font-weight:800;line-height:1.3;margin-bottom:4px}
+.codepanel .cpb{font-size:13.5px;color:#cfe0f5}
+.codepanel .cpbtn{flex:none;display:inline-block;background:#fff;color:var(--navy);text-decoration:none;font-weight:800;font-size:14px;
+  padding:11px 20px;border-radius:999px;transition:transform .15s ease,box-shadow .15s ease}
+.codepanel .cpbtn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(2,10,30,.4);color:var(--magenta)}
+.codepanel .cpbtn:focus-visible,.helpline a:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.helpline{margin-top:16px;font-size:12.5px;color:#cfe0f5}
+.helpline a{color:#fff;font-weight:700}
+
 .foot{position:relative;z-index:1;text-align:center;color:rgba(207,224,245,.55);font-size:11.5px;
   letter-spacing:.05em;padding:0 22px 22px}
 
@@ -89,6 +103,18 @@ a.card:nth-child(even) .cardgo{color:var(--cyan)}
       <div class="cardgo">Open &rarr;</div>
     </a>
   </div>
+
+  <!-- Faculty with a committee/role access code kept looking for their dashboards here
+       (Nov 2026). This sends them to the Hub's code box (?code opens it). Never name codes. -->
+  <div class="codepanel">
+    <div class="cptext">
+      <div class="cpk">Committee members, directors and staff</div>
+      <div class="cpt">Were you given an access code?</div>
+      <div class="cpb">Committee, director and staff dashboards aren't on this page. Enter your code on the Hub to open them.</div>
+    </div>
+    <a class="cpbtn" href="/Dashboard---HUB/?code">Enter your access code &rarr;</a>
+  </div>
+  <p class="helpline">Trouble getting in? <a href="/Dashboard---HUB/help.html#faculty">Access help</a></p>
 </main>
 
 <div class="foot">Icahn School of Medicine at Mount Sinai &middot; ASCEND Curriculum &middot; Internal program-evaluation use</div>
